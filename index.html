@@ -3,146 +3,477 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>ZERO TO HERO | Market Learning</title>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    min-height:100vh;
+    color:#fff;
+    background:
+        radial-gradient(circle at 15% 10%,rgba(92,70,255,.22),transparent 28%),
+        radial-gradient(circle at 90% 35%,rgba(0,202,255,.16),transparent 30%),
+        linear-gradient(145deg,#050611,#0b0c1b 50%,#050712);
+    padding:18px 12px 35px;
+}
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+.container{
+    width:100%;
+    max-width:680px;
+    margin:auto;
+}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+/* LOGO */
+.logo-wrap{
+    width:125px;
+    height:125px;
+    margin:5px auto 18px;
+    padding:4px;
+    border-radius:32px;
+    background:linear-gradient(135deg,#8b5cf6,#19cfff);
+    box-shadow:0 0 35px rgba(96,80,255,.25);
+    transform:rotate(-2deg);
+}
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+.logo{
+    width:100%;
+    height:100%;
+    border-radius:28px;
+    overflow:hidden;
+    background:#fff;
+    transform:rotate(2deg);
+}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
 
-  .feature-item:last-child { border-bottom: none; }
+/* HERO */
+.hero{
+    text-align:center;
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+.badge{
+    display:inline-block;
+    padding:7px 14px;
+    border-radius:50px;
+    background:rgba(112,86,255,.12);
+    border:1px solid rgba(139,92,246,.35);
+    color:#b8a9ff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+.title{
+    font-size:42px;
+    font-weight:900;
+    letter-spacing:1px;
+    line-height:1.05;
+    background:linear-gradient(90deg,#fff,#b9c9ff,#6ddcff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+.subtitle{
+    margin-top:10px;
+    color:#aeb7cc;
+    font-size:16px;
+    line-height:1.5;
+}
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin:25px 0 17px;
+}
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+.stat{
+    padding:16px 5px;
+    text-align:center;
+    border-radius:18px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+}
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+.stat strong{
+    display:block;
+    font-size:20px;
+    color:#65dfff;
+    margin-bottom:5px;
+}
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+.stat span{
+    color:#858da1;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+/* CTA */
+.cta{
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    padding:20px 14px;
+    border-radius:18px;
+    color:#fff;
+    font-size:19px;
+    font-weight:800;
+    background:linear-gradient(100deg,#6848ff,#147fff,#00bfe8);
+    box-shadow:
+        0 12px 35px rgba(45,90,255,.25),
+        inset 0 1px 0 rgba(255,255,255,.25);
+    border:1px solid rgba(255,255,255,.2);
+    margin-bottom:22px;
+}
+
+.cta small{
+    display:block;
+    font-size:10px;
+    font-weight:500;
+    opacity:.8;
+    margin-top:5px;
+}
+
+/* SECTION */
+.section-title{
+    text-align:center;
+    font-size:13px;
+    color:#707a91;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin:8px 0 14px;
+}
+
+/* CARDS */
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.card{
+    min-height:175px;
+    padding:20px 12px;
+    border-radius:22px;
+    text-align:center;
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+    border:1px solid rgba(132,153,255,.13);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.icon{
+    width:57px;
+    height:57px;
+    margin:0 auto 15px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    background:linear-gradient(135deg,#5d4cff,#18c8ed);
+    box-shadow:0 8px 22px rgba(66,83,255,.2);
+}
+
+.card:nth-child(2) .icon{
+    background:linear-gradient(135deg,#00a8ff,#6957ff);
+}
+
+.card:nth-child(3) .icon{
+    background:linear-gradient(135deg,#8b5cf6,#d14cff);
+}
+
+.card:nth-child(4) .icon{
+    background:linear-gradient(135deg,#00c99a,#00a8d8);
+}
+
+.card h3{
+    font-size:14px;
+    line-height:1.45;
+    color:#f1f3f8;
+    margin-bottom:7px;
+}
+
+.card p{
+    font-size:10px;
+    color:#7f899d;
+    line-height:1.4;
+}
+
+/* JOURNEY */
+.journey{
+    margin-top:18px;
+    padding:18px;
+    text-align:center;
+    border-radius:20px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.journey h3{
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.journey p{
+    color:#858ea2;
+    font-size:11px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    margin-top:20px;
+}
+
+.agency{
+    display:inline-block;
+    padding:10px 17px;
+    border-radius:13px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    color:#7d8799;
+    font-size:11px;
+}
+
+.agency a{
+    color:#ffd33d;
+    text-decoration:none;
+    font-weight:800;
+}
+
+.disclaimer{
+    color:#626c7e;
+    font-size:9px;
+    line-height:1.55;
+    margin:14px auto 0;
+    max-width:600px;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+
+    body{
+        padding:14px 10px 28px;
+    }
+
+    .logo-wrap{
+        width:108px;
+        height:108px;
+        border-radius:28px;
+        margin-bottom:15px;
+    }
+
+    .logo{
+        border-radius:24px;
+    }
+
+    .badge{
+        font-size:9px;
+        padding:6px 11px;
+    }
+
+    .title{
+        font-size:34px;
+    }
+
+    .subtitle{
+        font-size:13px;
+    }
+
+    .stats{
+        margin-top:20px;
+        gap:6px;
+    }
+
+    .stat{
+        padding:13px 3px;
+        border-radius:15px;
+    }
+
+    .stat strong{
+        font-size:17px;
+    }
+
+    .stat span{
+        font-size:9px;
+    }
+
+    .cta{
+        font-size:17px;
+        padding:18px 10px;
+        border-radius:17px;
+    }
+
+    .features{
+        gap:10px;
+    }
+
+    .card{
+        min-height:165px;
+        padding:18px 8px;
+        border-radius:19px;
+    }
+
+    .icon{
+        width:52px;
+        height:52px;
+        font-size:25px;
+        margin-bottom:13px;
+    }
+
+    .card h3{
+        font-size:13px;
+    }
+
+    .card p{
+        font-size:9px;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<div class="container">
 
-  <h1>Munaaf</h1>
+    <!-- LOGO -->
+    <div class="logo-wrap">
+        <div class="logo">
+            <img
+                src="https://i.ibb.co/ns8ygrhL/In-Shot-20260923-184547035.jpg"
+                alt="ZERO TO HERO Logo">
+        </div>
+    </div>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
+    <!-- HERO -->
+    <div class="hero">
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+        <div class="badge">
+            FREE MARKET LEARNING COMMUNITY
+        </div>
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+        <h1 class="title">ZERO TO HERO</h1>
 
-  <p class="hindi-quote">     ,     </p>
+        <p class="subtitle">
+            Learn. Analyze. Trade Smarter.
+        </p>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
+    </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
+    <!-- STATS -->
+    <div class="stats">
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>FREE ACCESS</span>
+        </div>
+
+        <div class="stat">
+            <strong>DAILY</strong>
+            <span>INSIGHTS</span>
+        </div>
+
+        <div class="stat">
+            <strong>BEGINNER</strong>
+            <span>FRIENDLY</span>
+        </div>
+
+    </div>
+
+    <!-- TELEGRAM CTA -->
+    <a
+        class="cta"
+        href="https://t.me/+dmDQ3AkxzFFmYzg1"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        🚀 JOIN FREE TELEGRAM →
+
+        <small>Start your market learning journey</small>
+
+    </a>
+
+    <div class="section-title">
+        What You'll Learn
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>MARKET INSIGHTS</h3>
+            <p>NIFTY &amp; BANKNIFTY analysis</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>CHART MASTERY</h3>
+            <p>Technical analysis &amp; chart reading</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>SMART RISK</h3>
+            <p>Risk management &amp; trading concepts</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>LEARN &amp; GROW</h3>
+            <p>Educational sessions &amp; discussions</p>
+        </div>
+
+    </div>
+
+    <!-- JOURNEY -->
+    <div class="journey">
+        <h3>✨ Start From Zero. Learn. Grow.</h3>
+        <p>
+            Build your understanding of the market step by step.
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+        <div class="agency">
+            Promoted By
+            <a
+                href="https://t.me/+3XoqJNLxYHswNTc1"
+                target="_blank"
+                rel="noopener noreferrer">
+                AD BUILD AGENCY
+            </a>
+        </div>
+
+        <div class="disclaimer">
+            Disclaimer: This channel is for educational and informational
+            purposes only. We are not SEBI-registered investment advisors.
+            Stock market trading involves financial risk. Please conduct
+            your own research and consult a qualified financial professional
+            before making any investment decision.
+        </div>
+
+    </div>
+
 </div>
 
 </body>
